@@ -196,13 +196,13 @@ p{
 	float: left;
     width: 30%;
     background-color: rgba(172, 241, 189, 1);
-    padding:6%;
+    
 }
 
 .right-details{
 	    float: left;
     width: 70%;
-        padding: 4% 0 3% 3%;
+        
 }
 
 .main-container-one , .main-container-two, .main-container-three, .main-container-four{
@@ -238,4 +238,9 @@ nav{
     color: aqua;
     font-size: 12px;
     font-weight: normal;
+    margin:3% 0 0 0;
+}
+
+.changing-image{
+	float:left;
 }
