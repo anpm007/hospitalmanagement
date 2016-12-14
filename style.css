@@ -1,3 +1,7 @@
+@keyframes blinker {  
+  50% { opacity: .3; }
+}
+
 body{
 	margin:0;
 	color:#6a6f8c;
@@ -213,7 +217,7 @@ p{
 .hospital-image{
 	float: left;
     width: 30%;
-    background-color: rgba(172, 241, 189, 1);
+    
     
 }
 
@@ -232,7 +236,7 @@ p{
 	background-color: rgba(172, 241, 189, 1);
 	    width: 66.6%;
     float: left;
-    padding:3%;
+  
 }
 
 .location{
@@ -258,6 +262,7 @@ nav{
     font-size: 12px;
     font-weight: normal;
     margin:3% 0 0 0;
+	padding-left:10%;
 }
 
 .changing-image{
@@ -302,4 +307,53 @@ table tr td:nth-child(2) {
 
 .new-patient{
 	background-color: mediumturquoise;
+	background:url('../images/new-patient.jpg') no-repeat;
+	    height: 180px;
+    background-size: contain;
+	   
 }
+
+h4{
+	margin-bottom:74px;
+	margin-left:5%;
+}
+
+.alerts > h2{margin-left:5%;}
+
+.main-container-two li{padding:2%;}
+
+.hospital-image img{    width: 108px;
+    margin-top: 6px;}
+	
+	.hospital-name{    float: right;
+    padding: 30px;
+    font-size: 21px;
+    color: brown;}
+	
+	.street-address img{width:25px;float:left;margin-top: 13px;}
+	.contact-no img{width:35px;float:left;margin-top: 13px;}
+	
+	.street-address{float:left;width:50%;}
+	
+	.address{float: left;
+    margin-left: 10%;
+    margin-top: 13px;}
+	
+	.phn-number{float: left;
+    margin-left: 3%;
+    margin-top: 22px;}
+	
+	.patient-portal{
+		width:30%;
+		float:left;
+		 cursor: pointer;
+		 color:brown;
+		padding-left:2%;
+		animation: blinker 2s linear infinite;
+	}
+	
+	footer{
+		float: left;
+    width: 100%;
+    text-align: center;
+	}
