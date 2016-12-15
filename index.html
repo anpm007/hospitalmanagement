@@ -1,83 +1,372 @@
+
 <!DOCTYPE html>
-<html >
+<html>
 <head>
-  <meta charset="UTF-8">
-  <meta name="description" content="Hospital Appointment Maintainance">
-<meta name="author" content="Anupam Sinha">
-  <title>Appointment Maintenance</title>
-  
-  
-  <!--<link rel='stylesheet prefetch' href='http://fonts.googleapis.com/css?family=Open+Sans:600'>-->
+<title>Medi Cure</title>
+<!-- for-mobile-apps -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="keywords" content="Medi Cure " />
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<!-- //for-mobile-apps -->
+<link href="bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+<link href="style.css" rel="stylesheet" type="text/css" media="all" />
+<!-- toggle menu links -->
+<link href="component.css" rel="stylesheet" type="text/css"  />
+<!-- //menu links -->
+<link href="popuo-box.css" rel="stylesheet" type="text/css" media="all"/>
+<!-- effect9 links -->
+<link href="ihover.css" rel="stylesheet" media="all">
+<!-- js -->
+<script src="jquery-1.11.1.min.js"></script>
+<!-- //js -->
+<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+	<!-- start-smoth-scrolling -->
+		<script type="text/javascript" src="move-top.js"></script>
+		<script type="text/javascript" src="easing.js"></script>
+		<script type="text/javascript">
+			jQuery(document).ready(function($) {
+				$(".scroll").click(function(event){		
+					event.preventDefault();
+					$('html,body').animate({scrollTop:$(this.hash).offset().top},1000);
+				});
+			});
+		</script>
+	<!-- start-smoth-scrolling -->
 
-      <link rel="stylesheet" href="css/style.css">
-
-  <script src="script/jquery.min.js" type="text/javascript"></script>
-		<script src="script/login.js" type="text/javascript"></script>	
 </head>
+<!-- slide-toggle-menu -->
+<body class="cbp-spmenu-push">
+       <!--top-header-->
+		<!--bottom-->
+		  <section class="button">
+					<button id="showLeftPush"><img src="menu.png" alt=""></button>
+		   </section>
+			<nav class="cbp-spmenu cbp-spmenu-vertical cbp-spmenu-left" id="cbp-spmenu-s1">
+				<h3>Menu</h3>
+						<a href="index.html" class="active">HOME</a>
+						<a href="about.html">ABOUT</a>
+						
+		    </nav>
+		  
+		<!-- Classie - class helper functions by @desandro https://github.com/desandro/classie -->
+		<script src="classie.js"></script>
+		<script>
+			var menuLeft = document.getElementById( 'cbp-spmenu-s1' ),
+				showLeftPush = document.getElementById( 'showLeftPush' ),
+				showRightPush = document.getElementById( 'showRightPush' ),
+				body = document.body;
 
-<body>
-  <div class="login-wrap">
-	<div class="login-html">
-		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Sign In</label>
-		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Sign Up</label>
-		<div class="login-form">
-			<div class="sign-in-htm">
-				<div class="group">
-					<label for="user" class="label">Username</label>
-					<input id="user" type="text" class="input">
+			showLeftPush.onclick = function() {
+				classie.toggle( this, 'active' );
+				classie.toggle( body, 'cbp-spmenu-push-toright' );
+				classie.toggle( menuLeft, 'cbp-spmenu-open' );
+				disableOther( 'showLeftPush' );
+			};
+
+			function disableOther( button ) {
+				if( button !== 'showLeftPush' ) {
+					classie.toggle( showLeftPush, 'disabled' );
+				}
+				if( button !== 'showRightPush' ) {
+					classie.toggle( showRightPush, 'disabled' );
+				}
+			}
+		</script>
+<!-- banner -->
+<div class="banner">
+	<div class="logo">
+		<h1><a href="index.html">MEDI CURE</a></h1>
+	</div>
+	<div class="search">		
+		<a class="play-icon popup-with-zoom-anim" href="#small-dialog"><i class="glyphicon glyphicon-search"> </i> </a>
+	</div>
+	<script src="jquery.magnific-popup.js" type="text/javascript"></script>
+		<div id="small-dialog" class="mfp-hide">
+			<div class="search-top">
+				<div class="login">
+					<input type="submit" value="">
+					<input type="text" value="Type something..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = '';}">		
+				</div>			
+			</div>
+			<script>
+						$(document).ready(function() {
+						$('.popup-with-zoom-anim').magnificPopup({
+							type: 'inline',
+							fixedContentPos: false,
+							fixedBgPos: true,
+							overflowY: 'auto',
+							closeBtnInside: true,
+							preloader: false,
+							midClick: true,
+							removalDelay: 300,
+							mainClass: 'my-mfp-zoom-in'
+						});
+																						
+						});
+			</script>				
+		</div>
+	<div class="banner-info">
+		<script src="responsiveslides.min.js"></script>
+			<script>
+									// You can also use "$(window).load(function() {"
+									$(function () {
+									 // Slideshow 4
+									$("#slider3").responsiveSlides({
+										auto: true,
+										pager: false,
+										nav: true,
+										speed: 500,
+										namespace: "callbacks",
+										before: function () {
+									$('.events').append("<li>before event fired.</li>");
+									},
+									after: function () {
+										$('.events').append("<li>after event fired.</li>");
+										}
+										});
+										});
+			</script>
+			<div  id="top" class="callbacks_container">
+				<ul class="rslides" id="slider3">
+					<li>
+						<div class="banner-text">
+							<h3>MAKE YOUR LIFE MORE<span> HEALTHY AND SAFE</span></h3>
+							<p> please write some text here :(   </p>
+							
+					</li>
+					<li>
+						<div class="banner-text">
+							<h3>BETTER HEALTH CARE IS CLOSER<span> THAN YOU THINK</span></h3>
+							<p> some texte here also... </p>
+							
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="down-arrow text-center"><a class="scroll" href="#banner-bottom"><span class="glyphicon glyphicon-chevron-down" aria-hidden="true"></span></a></div>
+	</div>
+</div>
+<!-- //banner -->
+<!-- banner-bottom -->
+<div id="banner-bottom" class="banner-bottom">
+	<div class="container">
+		<h3 class="tittle">WELCOME TO MEDI CURE</h3>
+		<p> We are here to care for you.. just make a appointment to the doctors...</p>
+		<ul id="sti-menu" class="sti-menu">
+				<li data-hovercolor="#fff">
+					<a href="#">
+						<h4 data-type="mText" class="sti-item">HEALTH</h4>
+						<p data-type="sText" class="sti-item">Regular health checkups are here</p>
+						<span data-type="icon" class="sti-icon glyphicon glyphicon-plus sti-item"></span>
+					</a>
+				</li>
+				<li data-hovercolor="#fff">
+					<a href="#">
+						<h4 data-type="mText" class="sti-item">SURGERY</h4>
+						<p data-type="sText" class="sti-item">We also have surgery facility</p>
+						<span data-type="icon" class="sti-icon glyphicon glyphicon-scissors sti-item"></span>
+					</a>
+				</li>
+				<li data-hovercolor="#fff">
+					<a href="doctors.html">
+						<h4 data-type="mText" class="sti-item">Doctors</h4>
+						<p data-type="sText" class="sti-item">View our doctors</p>
+						<span data-type="icon" class="sti-icon glyphicon glyphicon-education sti-item"></span>
+					</a>
+				</li>
+				<li data-hovercolor="#fff">
+					<a href="#">
+						<h4 data-type="mText" class="sti-item">Care</h4>
+						<p data-type="sText" class="sti-item">we care for our patients</p>
+						<span data-type="icon" class="sti-icon glyphicon glyphicon-apple sti-item"></span>
+					</a>
+				</li>
+				
+				<script type="text/javascript" src="jquery.iconmenu.js"></script>
+				<script type="text/javascript">
+					$(function() {
+						$('#sti-menu').iconmenu({
+							animMouseenter	: {
+								'mText' : {speed : 400, easing : 'easeOutExpo', delay : 140, dir : 1},
+								'sText' : {speed : 400, easing : 'easeOutExpo', delay : 0, dir : 1},
+								'icon'  : {speed : 800, easing : 'easeOutBounce', delay : 280, dir : 1}
+							},
+							animMouseleave	: {
+								'mText' : {speed : 400, easing : 'easeInExpo', delay : 140, dir : 1},
+								'sText' : {speed : 400, easing : 'easeInExpo', delay : 280, dir : 1},
+								'icon'  : {speed : 400, easing : 'easeInExpo', delay : 0, dir : 1}
+							}
+						});
+					});
+				</script>
+		</ul>
+	</div>
+</div>
+<!-- //banner-bottom -->
+<!-- measure -->
+<div class="measure">
+	<div class="container">
+		<h3>WE MEASURE SUCCESS IN SMILES AND IMPROVEMENT IN HEALTH AND QUALITY OF LIFE.</h3>
+	</div>
+</div>
+<!-- measure -->
+<!-- qualified -->
+<div class="qualified">
+	<div class="container">
+		<h3 class="tittle">ONLY QUALIFIED MEDICAL SERVICES</h3>
+		<div class="qualified-grids">
+			<div class="col-md-7 qualify-left">
+				<div class="qualify-left-grids">
+					<div class="qua-left-gd text-right">
+						<h4>Heart checkups</h4>
+						<p>Best facility avilable in town...</p>
+					</div>
+					<div class="qua-right-gd text-center">
+						<img src="t2.png" alt="" />
+					</div>
+					<div class="clearfix"></div>
 				</div>
-				<div class="group">
-					<label for="pass" class="label">Password</label>
-					<input id="pass" type="password" class="input" data-type="password">
-				</div>
-				<div class="group">
-					<input id="check" type="checkbox" class="check" checked>
-					<label for="check"><span class="icon"></span> Keep me Signed in</label>
-				</div>
-				<div class="group">
-					<input id="submit" type="submit" class="button" value="Sign In">
-				</div>
-				<div class="hr"></div>
-				<div class="foot-lnk">
-					<a href="#forgot">Forgot Password?</a>
+				<div class="qualify-left-grids">
+					<div class="qua-left-gd text-right">
+						<h4>Blood test</h4>
+						<p>Vast facility of this test is avilable... Please write manualy cuz i dont know about the doctors and their hospitals... :( cuz not enough documentation was provided</p>
+					</div>
+					<div class="qua-right-gd text-center">
+						<img src="t3.png" alt="" />
+					</div>
+					<div class="clearfix"></div>
 				</div>
 			</div>
-			<div class="sign-up-htm">
-				<div class="group">
-					<label for="user" class="label">Username</label>
-					<input id="user" type="text" class="input">
-				</div>
-				<div class="group">
-					<label for="pass" class="label">Password</label>
-					<input id="pass" type="password" class="input" data-type="password">
-				</div>
-				<div class="group">
-					<label for="pass" class="label">Repeat Password</label>
-					<input id="pass" type="password" class="input" data-type="password">
-				</div>
-				<div class="group">
-					<label for="pass" class="label">Email Address</label>
-					<input id="pass" type="text" class="input">
-				</div>
-				<div class="group">
-					<input type="submit" class="button" value="Sign Up">
-				</div>
-				<div class="hr"></div>
-				<div class="foot-lnk">
-					<label for="tab-1">Already Member?</a>
+			<div class="col-md-5 qualify-right grid">
+				<figure class="effect-moses">
+						<img src="aa.jpg" alt="" />
+						<figcaption>
+							<h4>MEDI <span>CURE</span></h4>
+							<p>A step ahead</p>
+						</figcaption>			
+				</figure>
+			</div>
+			<div class="clearfix"></div>
+		</div>
+	</div>
+</div>	
+<!-- qualified -->
+<div class="welcome-grids">
+	<div class="container">
+		<h3 class="tittle">THE BEST MEDICINE IS PREVENTION</h3>
+			<div class="col-md-3 welcome-grid text-center">
+				<div class="ih-item circle effect9 left_to_right"><a href="#">
+					<div class="img"><img src="22.jpg" alt="" /></div>
+					<div class="info">
+					  <h4>MEDI CURE</h4>
+					  <p>Description goes here</p>
+					</div></a>
 				</div>
 			</div>
+			<div class="col-md-3 welcome-grid text-center">
+				<div class="ih-item circle effect9 left_to_right"><a href="#">
+					<div class="img"><img src="3.jpg" alt="" /></div>
+					<div class="info">
+					  <h4>MEDI CURE</h4>
+					  <p>Description goes here</p>
+					</div></a>
+				</div>
+			</div>
+			<div class="col-md-3 welcome-grid text-center">
+				<div class="ih-item circle effect9 left_to_right"><a href="#">
+					<div class="img"><img src="2.jpg" alt="" /></div>
+					<div class="info">
+					  <h4>MEDI CURE</h4>
+					  <p>Description goes here</p>
+					</div></a>
+				</div>
+			</div>
+			<div class="col-md-3 welcome-grid text-center">
+				<div class="ih-item circle effect9 left_to_right"><a href="#">
+					<div class="img"><img src="111.jpg" alt="" /></div>
+					<div class="info">
+					  <h4>MEDI CURE</h4>
+					  <p>Description goes here</p>
+					</div></a>
+				</div>
+			</div>
+			<div class="clearfix"></div>
+	</div>
+</div>
+<!--- opening days --->
+   <div class="bottom">
+		<div class="container">
+			<div class="bottom-top">
+				<h3>Opening Hours of <span class="opening">Medicure</span></h3>
+				<p></p>
+				<div class="opening_hours">
+						 <ul class="times">
+							<h4>Opening <span class="opening">Hours</span></h4>
+							<li><i class="glyphicon glyphicon-time"> </i><span class="week">Monday</span><div class="hours">9:30 am – 3:30 pm</div>  <div class="clearfix"></div></li>
+							<li><i class="glyphicon glyphicon-time"> </i><span class="week">Tuesday</span><div class="hours">10:30 am – 5:30 pm</div>  <div class="clearfix"></div></li>
+							<li><i class="glyphicon glyphicon-time"> </i><span class="week">Wednesday</span><div class="hours">8:30 am – 1:30 pm</div>  <div class="clearfix"></div></li>
+							<li><i class="glyphicon glyphicon-time"> </i><span class="week">Thrusday</span><div class="hours">11:30 am – 2:30 pm</div>  <div class="clearfix"></div></li>
+							<li><i class="glyphicon glyphicon-time"> </i><span class="week">Friday</span><div class="hours">10:00 am – 2:00 pm</div>  <div class="clearfix"></div></li>
+							<li><i class="glyphicon glyphicon-time"> </i><span class="week">Saturday</span><div class="hours">11:30 am – 2:30 pm</div>  <div class="clearfix"></div></li>
+							<li><i class="glyphicon glyphicon-time"> </i><span class="week">Sunday</span><div class="hours">Family Doctor</div>  <div class="clearfix"></div></li>
+	
+						 </ul>
+					</div>
+			</div>
+		</div>
+</div>
+<!--opening days->>>
+<!-- //qualified -->
+<!-- contact -->
+<div class="contact-home">
+	<div class="map-home">
+		<iframe ></iframe>
+		<div class="map-pos">
+			<div class="login-pad">
+				<h2>MAKE AN APPOINTMENT</h2>
+					<form>
+						<input type="text" placeholder="Name" for="name" required>
+						<input type="text" placeholder="Email" for="email" required>
+						<input type="text" placeholder="Mobile"  for="Mobile" required>
+						<label class="checkbox"><input type="checkbox" name="checkbox" checked><i> </i>Subscribe in your Newsletter</label>
+						<textarea placeholder="Message" required></textarea>
+						<input type="submit" value="SEND">
+					</form>
+			</div>
+			<div class="clearfix"></div>
 		</div>
 	</div>
 </div>
-  <div class="user-profile">
-  	<span> Choose your role :</span>
-  	<ul>
-  		<li>Doctor</li>
-  		<li>Admin</li>
-  		<li>Patient</li>
-  	</ul>
-  </div>
-  
+<!-- //contact -->
+<!-- copy-right -->
+<div class="copy-right">
+	<div class="container">
+		<p> &copy; 2016 Medi Cure. All Rights Reserved | Design by LazyDevs</p>
+	</div>
+</div>
+<!-- //copy-right -->
+<!-- Bootstrap core JavaScript-->
+    <!-- Placed at the end of the document so the pages load faster -->
+	<!-- js -->
+		 <script src="js/bootstrap.js"></script>
+	<!-- js -->
+<!-- smooth scrolling -->
+	<script type="text/javascript">
+		$(document).ready(function() {
+		/*
+			var defaults = {
+			containerID: 'toTop', // fading element id
+			containerHoverID: 'toTopHover', // fading element hover id
+			scrollSpeed: 1200,
+			easingType: 'linear' 
+			};
+		*/								
+		$().UItoTop({ easingType: 'easeOutQuart' });
+		});
+	</script>
+	<a href="#" id="toTop" style="display: block;"> <span id="toTopHover" style="opacity: 1;"> </span></a>
+<!-- //smooth scrolling -->
 </body>
 </html>
