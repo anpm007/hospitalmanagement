@@ -5,7 +5,7 @@ import Header from './src/components/Header';
 import CarList from './src/components/CarList';
 import LoginForm from './src/components/LoginForm';
 
-//import App from './src/app';
+import Router from './src/Router';
 
 
 
@@ -17,19 +17,19 @@ import LoginForm from './src/components/LoginForm';
 
 
  //Create a Component
-const App = () => {
-return (
+//const App = () => {
+//return (
 
-<View style={{flex:1}}>
-<Header headerText={'My Vehicle Dashboard'} />
+//<View style={{flex:1}}>
+//<Header headerText={'My Vehicle Dashboard'} />
 
-<CarList />
+//<LoginForm />
 
-</View>
+//</View>
 
-);
-};
+//);
+//};
 
 //export default App;
 // Render it to the device
-AppRegistry.registerComponent('AwesomeProject',() => App); // only the root component uses AppRegistry
+AppRegistry.registerComponent('AwesomeProject',() => Router); // only the root component uses AppRegistry
